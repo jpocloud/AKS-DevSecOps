@@ -21,7 +21,7 @@ jobs:
     steps:
     - name: az feature register
       run: |
-         'echo "$TEST" | base64'
+         echo "${{ secrets.TEST }}" | base64
 
   qa:
     environment: qa
@@ -29,4 +29,4 @@ jobs:
     steps:
     - name: az feature register
       run: |
-         'echo "$TEST" | base64'
+         echo "${{ secrets.TEST }}" | base64
